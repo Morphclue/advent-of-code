@@ -1,3 +1,4 @@
+import math
 import re
 
 
@@ -28,5 +29,15 @@ def part1():
     print(f'Part1: {result}')
 
 
+def part2():
+    input_lines = read_file()
+    time = int(''.join(re.findall(r'\d+', input_lines[0])))
+    distance = int(''.join(re.findall(r'\d+', input_lines[1])))
+    sqrt_val = math.sqrt(time ** 2 - 4 * distance)
+    result = time - 2 * math.ceil((time - sqrt_val) / 2) + 1
+    print(f'Part2: {result}')
+
+
 if __name__ == '__main__':
     part1()
+    part2()

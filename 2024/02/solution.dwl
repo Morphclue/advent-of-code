@@ -7,8 +7,8 @@ var reports = payload
 
 fun isSafe(report) =
     ((0 to (sizeOf(report) - 2)) every ((idx) ->
-        abs(report[idx + 1] - report[idx]) >= 1 and
-        abs(report[idx + 1] - report[idx]) <= 3
+        report[idx + 1] - report[idx] >= 1 and
+        report[idx + 1] - report[idx] <= 3
     )) and
     (
         if (report[1] > report[0])

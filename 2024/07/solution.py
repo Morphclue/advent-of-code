@@ -29,6 +29,8 @@ def process_data(data):
 def main():
     data = read_file()
     print(f"Part1: {process_data(data)}")
+    operations.append(lambda a, b: int(str(a) + str(b)))
+    print(f"Part2: {process_data(data)}")
 
 
 if __name__ == '__main__':
